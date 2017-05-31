@@ -11,7 +11,6 @@ LOOP:while(<>)
   $_=Encode::decode_utf8( $_ );
   foreach my $i (@prefixes)
   {
-    #if(/^$i[^u]?/i)#if(/^$i[^aeiouáéíóúùyý]/i)
     if(/^$i[^u]/i)#if(/^$i[^aeiouáéíóúùyý]/i)
     {
       s/^$i/|/i;
