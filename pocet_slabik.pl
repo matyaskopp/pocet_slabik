@@ -8,9 +8,7 @@ my @prefixes = qw/o za na pře ne po pro do/ ;
 LOOP:while(<>)
 {
   s/\n//;
-  #printf("%s\t",$_);
   $_=Encode::decode_utf8( $_ );
-  $dalsi=0;
   foreach my $i (@prefixes)
   {
     #if(/^$i[^u]?/i)#if(/^$i[^aeiouáéíóúùyý]/i)
